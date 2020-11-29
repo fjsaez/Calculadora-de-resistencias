@@ -4,7 +4,7 @@ object FPrinc: TFPrinc
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = 'Calculadora de resistencias'
-  ClientHeight = 480
+  ClientHeight = 520
   ClientWidth = 640
   Fill.Kind = Solid
   Position = ScreenCenter
@@ -16,7 +16,7 @@ object FPrinc: TFPrinc
   object RectConductor: TRectangle
     Fill.Color = claDarkslategray
     Position.X = 27.000000000000000000
-    Position.Y = 355.000000000000000000
+    Position.Y = 315.000000000000000000
     Size.Width = 585.000000000000000000
     Size.Height = 18.000000000000000000
     Size.PlatformDefault = False
@@ -24,7 +24,7 @@ object FPrinc: TFPrinc
   object RndResistencia: TRoundRect
     Fill.Color = claBisque
     Position.X = 119.000000000000000000
-    Position.Y = 296.000000000000000000
+    Position.Y = 256.000000000000000000
     Size.Width = 401.000000000000000000
     Size.Height = 137.000000000000000000
     Size.PlatformDefault = False
@@ -32,28 +32,28 @@ object FPrinc: TFPrinc
   end
   object RectDigit1: TRectangle
     Position.X = 192.000000000000000000
-    Position.Y = 297.000000000000000000
+    Position.Y = 257.000000000000000000
     Size.Width = 30.000000000000000000
     Size.Height = 135.000000000000000000
     Size.PlatformDefault = False
   end
   object RectDigit2: TRectangle
     Position.X = 240.000000000000000000
-    Position.Y = 297.000000000000000000
+    Position.Y = 257.000000000000000000
     Size.Width = 30.000000000000000000
     Size.Height = 135.000000000000000000
     Size.PlatformDefault = False
   end
   object RectMult: TRectangle
     Position.X = 336.000000000000000000
-    Position.Y = 297.000000000000000000
+    Position.Y = 257.000000000000000000
     Size.Width = 30.000000000000000000
     Size.Height = 135.000000000000000000
     Size.PlatformDefault = False
   end
   object RectTolerancia: TRectangle
     Position.X = 416.000000000000000000
-    Position.Y = 297.000000000000000000
+    Position.Y = 257.000000000000000000
     Size.Width = 30.000000000000000000
     Size.Height = 135.000000000000000000
     Size.PlatformDefault = False
@@ -61,7 +61,7 @@ object FPrinc: TFPrinc
   object LResistencia: TLabel
     Align = Horizontal
     StyledSettings = [Family]
-    Position.Y = 437.000000000000000000
+    Position.Y = 397.000000000000000000
     Size.Width = 640.000000000000000000
     Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
@@ -69,8 +69,8 @@ object FPrinc: TFPrinc
     TextSettings.Font.StyleExt = {00070000000000000004000000}
     TextSettings.FontColor = claBlue
     TextSettings.HorzAlign = Center
-    Text = '0 '#937' / 0 %'
-    TabOrder = 7
+    Text = 'Resistencia: 0 '#937
+    TabOrder = 5
   end
   object Panel1: TPanel
     Position.X = 12.000000000000000000
@@ -78,66 +78,75 @@ object FPrinc: TFPrinc
     Size.Width = 305.000000000000000000
     Size.Height = 209.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 9
-    object CBDigito1: TComboBox
-      Items.Strings = (
-        'Negro'
-        'Marr'#243'n'
-        'Rojo'
-        'Anaranjado'
-        'Amarillo'
-        'Verde'
-        'Azul'
-        'Violeta'
-        'Gris'
-        'Blanco')
-      Position.X = 135.000000000000000000
-      Position.Y = 72.000000000000000000
-      Size.Width = 150.000000000000000000
-      Size.Height = 22.000000000000000000
+    TabOrder = 0
+    object Rectangle1: TRectangle
+      Fill.Color = claAzure
+      Size.Width = 305.000000000000000000
+      Size.Height = 209.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 0
-      OnChange = RB1Change
     end
-    object CBDigito2: TComboBox
+    object CBDigito1: TComboBox
+      DropDownCount = 10
       Items.Strings = (
-        'Negro'
-        'Marr'#243'n'
-        'Rojo'
-        'Anaranjado'
-        'Amarillo'
-        'Verde'
-        'Azul'
-        'Violeta'
-        'Gris'
-        'Blanco')
-      Position.X = 135.000000000000000000
-      Position.Y = 96.000000000000000000
-      Size.Width = 150.000000000000000000
+        'Negro (0)'
+        'Marr'#243'n (1)'
+        'Rojo (2)'
+        'Anaranjado (3)'
+        'Amarillo (4)'
+        'Verde (5)'
+        'Azul (6)'
+        'Violeta (7)'
+        'Gris (8)'
+        'Blanco (9)')
+      Position.X = 133.000000000000000000
+      Position.Y = 72.000000000000000000
+      Size.Width = 155.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      OnChange = RB1Change
+      OnChange = ChB1Change
     end
-    object CBMult: TComboBox
+    object CBDigito2: TComboBox
+      DropDownCount = 10
       Items.Strings = (
-        'Negro'
-        'Marr'#243'n'
-        'Rojo'
-        'Anaranjado'
-        'Amarillo'
-        'Verde'
-        'Azul'
-        'Violeta'
-        'Gris'
-        'Blanco')
-      Position.X = 135.000000000000000000
-      Position.Y = 144.000000000000000000
-      Size.Width = 150.000000000000000000
+        'Negro (0)'
+        'Marr'#243'n (1)'
+        'Rojo (2)'
+        'Anaranjado (3)'
+        'Amarillo (4)'
+        'Verde (5)'
+        'Azul (6)'
+        'Violeta (7)'
+        'Gris (8)'
+        'Blanco (9)')
+      Position.X = 133.000000000000000000
+      Position.Y = 96.000000000000000000
+      Size.Width = 155.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
-      OnChange = RB1Change
+      OnChange = ChB1Change
+    end
+    object CBMult: TComboBox
+      DropDownCount = 10
+      Items.Strings = (
+        'Negro (x 1)'
+        'Marr'#243'n (x 10)'
+        'Rojo (x 100)'
+        'Anaranjado (x 1.000)'
+        'Amarillo (x 10.000)'
+        'Verde (x 100.000)'
+        'Azul (x 1.000.000)'
+        'Violeta (x 10.000.000)'
+        'Gris (x 100.000.000)'
+        'Blanco (x 1.000.000.000)')
+      Position.X = 133.000000000000000000
+      Position.Y = 144.000000000000000000
+      Size.Width = 155.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      OnChange = ChB1Change
     end
     object CBTolerancia1: TComboBox
       Items.Strings = (
@@ -145,17 +154,17 @@ object FPrinc: TFPrinc
         'Rojo'
         'Dorado'
         'Plateado')
-      Position.X = 135.000000000000000000
+      Position.X = 133.000000000000000000
       Position.Y = 168.000000000000000000
-      Size.Width = 150.000000000000000000
+      Size.Width = 155.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 4
-      OnChange = RB1Change
+      TabOrder = 6
+      OnChange = ChB1Change
     end
     object Label1: TLabel
       StyledSettings = [Family, FontColor]
-      Position.X = 19.000000000000000000
+      Position.X = 17.000000000000000000
       Position.Y = 75.000000000000000000
       Size.Width = 115.000000000000000000
       Size.Height = 17.000000000000000000
@@ -163,11 +172,11 @@ object FPrinc: TFPrinc
       TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       Text = 'Primer d'#237'gito:'
-      TabOrder = 16
+      TabOrder = 18
     end
     object Label2: TLabel
       StyledSettings = [Family, FontColor]
-      Position.X = 19.000000000000000000
+      Position.X = 17.000000000000000000
       Position.Y = 99.000000000000000000
       Size.Width = 115.000000000000000000
       Size.Height = 17.000000000000000000
@@ -175,11 +184,11 @@ object FPrinc: TFPrinc
       TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       Text = 'Segundo d'#237'gito:'
-      TabOrder = 15
+      TabOrder = 17
     end
     object Label3: TLabel
       StyledSettings = [Family, FontColor]
-      Position.X = 19.000000000000000000
+      Position.X = 17.000000000000000000
       Position.Y = 147.000000000000000000
       Size.Width = 115.000000000000000000
       Size.Height = 17.000000000000000000
@@ -187,11 +196,11 @@ object FPrinc: TFPrinc
       TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       Text = 'Multiplicador:'
-      TabOrder = 14
+      TabOrder = 16
     end
     object Label4: TLabel
       StyledSettings = [Family, FontColor]
-      Position.X = 19.000000000000000000
+      Position.X = 17.000000000000000000
       Position.Y = 171.000000000000000000
       Size.Width = 115.000000000000000000
       Size.Height = 17.000000000000000000
@@ -199,41 +208,32 @@ object FPrinc: TFPrinc
       TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       Text = 'Tolerancia:'
-      TabOrder = 12
-    end
-    object RB1: TRadioButton
-      IsChecked = True
-      Position.X = 142.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 20.000000000000000000
-      Size.Height = 20.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 17
-      OnChange = RB1Change
+      TabOrder = 14
     end
     object CBDigito3: TComboBox
+      DropDownCount = 10
       Items.Strings = (
-        'Negro'
-        'Marr'#243'n'
-        'Rojo'
-        'Anaranjado'
-        'Amarillo'
-        'Verde'
-        'Azul'
-        'Violeta'
-        'Gris'
-        'Blanco')
-      Position.X = 135.000000000000000000
+        'Negro (0)'
+        'Marr'#243'n (1)'
+        'Rojo (2)'
+        'Anaranjado (3)'
+        'Amarillo (4)'
+        'Verde (5)'
+        'Azul (6)'
+        'Violeta (7)'
+        'Gris (8)'
+        'Blanco (9)')
+      Position.X = 133.000000000000000000
       Position.Y = 120.000000000000000000
-      Size.Width = 150.000000000000000000
+      Size.Width = 155.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 1
-      OnChange = RB1Change
+      TabOrder = 4
+      OnChange = ChB1Change
     end
     object LDigito3: TLabel
       StyledSettings = [Family, FontColor]
-      Position.X = 19.000000000000000000
+      Position.X = 17.000000000000000000
       Position.Y = 123.000000000000000000
       Size.Width = 115.000000000000000000
       Size.Height = 17.000000000000000000
@@ -241,7 +241,7 @@ object FPrinc: TFPrinc
       TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       Text = 'Tercer d'#237'gito:'
-      TabOrder = 13
+      TabOrder = 15
     end
     object ChB4Bandas: TCheckBox
       IsChecked = True
@@ -250,7 +250,7 @@ object FPrinc: TFPrinc
       Size.Width = 80.000000000000000000
       Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 19
+      TabOrder = 0
       Text = '4 bandas'
       OnChange = ChB4BandasChange
     end
@@ -260,9 +260,23 @@ object FPrinc: TFPrinc
       Size.Width = 80.000000000000000000
       Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 18
+      TabOrder = 1
       Text = '5 bandas'
       OnChange = ChB5BandasChange
+    end
+    object ChB1: TCheckBox
+      StyledSettings = [Family, FontColor]
+      IsChecked = True
+      Position.X = 81.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 144.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 19
+      Text = 'Bandas de colores'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnChange = ChB1Change
     end
   end
   object Panel2: TPanel
@@ -271,19 +285,30 @@ object FPrinc: TFPrinc
     Size.Width = 305.000000000000000000
     Size.Height = 209.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 8
-    object RB2: TRadioButton
-      Position.X = 142.000000000000000000
-      Position.Y = 8.000000000000000000
-      Size.Width = 20.000000000000000000
-      Size.Height = 20.000000000000000000
+    TabOrder = 1
+    object Rectangle2: TRectangle
+      Fill.Color = claAzure
+      Size.Width = 305.000000000000000000
+      Size.Height = 209.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object CBTolerancia2: TComboBox
+      Items.Strings = (
+        '1 %'
+        '2 %'
+        '5 %'
+        '10 %')
+      Position.X = 140.000000000000000000
+      Position.Y = 104.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 8
-      OnChange = RB2Change
+      OnChange = ChB2Change
     end
     object EResistencia: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 9
+      TabOrder = 6
       KeyboardType = NumberPad
       MaxLength = 12
       FilterChar = '0123456789'
@@ -295,7 +320,19 @@ object FPrinc: TFPrinc
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
       StyledSettings = [Family, FontColor]
-      OnChange = RB2Change
+      OnChange = ChB2Change
+    end
+    object Label5: TLabel
+      StyledSettings = [Family, FontColor]
+      Position.X = 19.000000000000000000
+      Position.Y = 107.000000000000000000
+      Size.Width = 115.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Tolerancia:'
+      TabOrder = 9
     end
     object Label6: TLabel
       StyledSettings = [Family, FontColor]
@@ -309,58 +346,26 @@ object FPrinc: TFPrinc
       Text = 'Resistencia ('#937'):'
       TabOrder = 7
     end
-    object CBTolerancia2: TComboBox
-      Items.Strings = (
-        '1 %'
-        '2 %'
-        '5 %'
-        '10 %')
-      Position.X = 140.000000000000000000
-      Position.Y = 104.000000000000000000
-      Size.Width = 150.000000000000000000
-      Size.Height = 22.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 3
-      OnChange = RB2Change
-    end
-    object Label5: TLabel
+    object ChB2: TCheckBox
       StyledSettings = [Family, FontColor]
-      Position.X = 19.000000000000000000
-      Position.Y = 107.000000000000000000
-      Size.Width = 115.000000000000000000
-      Size.Height = 17.000000000000000000
+      Position.X = 102.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 102.000000000000000000
+      Size.Height = 19.000000000000000000
       Size.PlatformDefault = False
+      TabOrder = 19
+      Text = 'Valor literal'
       TextSettings.Font.Size = 14.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
-      Text = 'Tolerancia:'
-      TabOrder = 10
+      OnChange = ChB2Change
     end
-  end
-  object BCalcular: TButton
-    Position.X = 268.000000000000000000
-    Position.Y = 232.000000000000000000
-    Size.Width = 105.000000000000000000
-    Size.Height = 33.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 10
-    Text = 'Calcular'
-    OnClick = BCalcularClick
   end
   object RectDigit3: TRectangle
     Position.X = 288.000000000000000000
-    Position.Y = 297.000000000000000000
+    Position.Y = 257.000000000000000000
     Size.Width = 30.000000000000000000
     Size.Height = 135.000000000000000000
     Size.PlatformDefault = False
-  end
-  object SpeedButton1: TSpeedButton
-    Position.X = 616.000000000000000000
-    Position.Y = 456.000000000000000000
-    Size.Width = 22.000000000000000000
-    Size.Height = 22.000000000000000000
-    Size.PlatformDefault = False
-    Text = ':-)'
-    OnClick = SpeedButton1Click
   end
   object SBLimpiar: TSpeedButton
     Position.X = 566.000000000000000000
@@ -370,5 +375,157 @@ object FPrinc: TFPrinc
     Size.PlatformDefault = False
     Text = 'Limpiar'
     OnClick = SBLimpiarClick
+  end
+  object LMinMax: TLabel
+    Align = Horizontal
+    StyledSettings = [Family]
+    Position.Y = 477.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claBlue
+    TextSettings.HorzAlign = Center
+    Text = 'Min: 0 '#937' / M'#225'x: 0 '#937
+    TabOrder = 4
+  end
+  object LTolerancia: TLabel
+    Align = Horizontal
+    StyledSettings = [Family]
+    Position.Y = 445.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claBlue
+    TextSettings.HorzAlign = Center
+    Text = 'Tolerancia: 0 % (0 '#937')'
+    TabOrder = 2
+  end
+  object BAcerca: TButton
+    CanFocus = False
+    Position.X = 616.000000000000000000
+    Position.Y = 496.000000000000000000
+    Size.Width = 22.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    TabStop = False
+    OnClick = BAcercaClick
+    object ImgAcerca: TImage
+      MultiResBitmap = <
+        item
+          Width = 48
+          Height = 48
+          PNG = {
+            89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+            87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            0BBC494441546843ED596B6C1CD515FE66669FF6DAB137F12B0E794012C81B08
+            149A3E4848F36850FA0B5051495595B6205A2410D05688CAA18A0248A9A84415
+            511E6D5AD1343C02AA1AD216289884021124C421E4ED808913BFDFFBF0EECCEE
+            F43BB3339BF57AD65E27FCE88F7ED2973B3B73EFB9E79C7BCEBDE73A0ABE4498
+            A629F21C99F9B24DA75514C579BE685CB401B6D2AA4D8DF4F09D4A2535FB1B6C
+            85D3648AEF52FC9D92677977B1C65CB001A2241B51D243257C6C036C836C836C
+            FD6CFDFCEEB13A67944D920932C6EF71B6C3F63B9D94EF17B4321336C0565C28
+            4A07D986C872B2E28DFD9FCFFFF48B8125313D599F3052D5BA814A553515AFEA
+            E9F37A3D5DA541EDDCFC191587562D9A7E84CAF671FC00C74548314A8C91D591
+            952A1A451BC0C99C50F192E269513ABC7557D3F2E3677BD7A552EAD55515A170
+            556509CA837E94063CF07924A2E8662385685247246EA07B3086DEC1BE3E45F1
+            36CDAB0FEFFED19A058D54BAC736C631A4E8D02ACA005B7909173F0597B1AD7C
+            74C7FBEB9A4E77DF5B3DA562DAE259D5A8AB0C51691FA2C369C4860D44130686
+            F58C33035ED532A8C4AFA124A0F2BB8EF6FE188E9EE946577FFFB94597D43CF9
+            C0CD57BFC6AE3DE410E790F0328A31625C0372949770297F62E787CB1A9BDA1E
+            0A874BAE5CBE6426A65694A1AD7F183D4349A4D2C585B0AA2A9852E6436D6580
+            8644F0FED1B33464F093E50BA73DFAB3F557BE47C5FBD92D468E6BC49806E42B
+            BFE1F15D77740E251E5EFB95CBBD73EAC2F8AC234A8F4BFE5D38CA825ECCAA29
+            C1A9B63EBC7EA059AF2EF73EF687FBD63E57AC11E31920CA077A7AE2936EDEBC
+            73B337A87D7FC3CAEB94A1581ABD1109D52F0F5593FC282FD5B0E3AD03663C99
+            DAFEE283EB1FAAAC0CF6F2D3300D3032BD46A3A001545C25BD6D6D91B235BFDA
+            FEFCF469D56B6E5BB1049F77C6999413DA288A869FB932676A08DBDF3E8CD6B6
+            EEB77637DCFCBDAAAA92011A90205D271DCB00CBFB576CD8BAA5B6AEEAAE1FAC
+            5D8AE6B608DFDB1DC6C1A5B521CC9B261B1570B47510A7DB65B71C1F4C0FCC9F
+            3E09CFECFE085D3D03CF1E7AFA87F7537939375C43C9D5002A2EEF3D336F7DE2
+            0EC5AF6EBDEFD655CAD9DE64B616180F372CACC64D4BA7DABF3278EDA3B378E7
+            D32EFBD7D8D038FB5CAEC4E37F7DC3E41177EFD13FDEF57B2AAFBBAD424103EA
+            D63F7ACD505ADDF3E0EDAB02D1610546BAB8B0097A153C72FB55F0882B7360A4
+            4C34FCE520E2F6D63A1EE40CA90FFBD0B0EDEF89B0DFBFE2D4F67BF7B9192007
+            D328B0A3D21D8D6FBEF1DAF981280FFF611EA9462A5D14ABCB7DA3941778E8D6
+            AA72AFEB1837C6123ABA8674DCF4D5A5FEB3BDB14D1B376E74D5D5EDA58265BF
+            5CAB79FDDF9A37A30E91189537CCA2D9D127E1EA8ECEDEB8EB9842ECEE4F60F1
+            6575503D9E1B3735622D458CF24CE6AC1F81060F669A2FACFADA55B5816050CA
+            479691C533C213785A3880BAC9A5B6BC0CF69FEC40E311E60055701B5788C349
+            03B36AC33878E2CC42B4DCF00CF0CE8830CA3740C1B54B577802C19FAFBC7E31
+            12DCEA25F42742C9FF8F4E74C1EF51505D1144424FA1B1E92CB6BDD9CC725373
+            1D331613CC99597593B0E7E0891AB366782F5ADFFDCCD6D542FE92A858F6C093
+            73E75C76F7F58B16D2031701AE9CC1224EE091A24E199D17C522E8D370ACA505
+            7B3F38F414FEE3FB29F04856B5BC1CF889469356D7544D41329DE2CE3301A624
+            D10DE8299D64CB775278CB862CCFF2CEEA933BA6480E0D277149F5646A6BAE02
+            DA46444DAE5B142CBEE74A162707BEF3EDD5F0692EE9510069AEF59FEEFB86FD
+            AB30366C6984C72BD5F8C4513D2980AD3B58B026234BF1C16F3FE62BEB581AB9
+            027EF59A20135796C16D6B2B449DDB6C8845D9789412C460C52A678A9B9CB1C8
+            9D1D7E9F8F6A6BD7D8DA5AC8354061DCCEF07BFD0C1F2A55344D248AAC8D123C
+            CC74C654860C2D21C7BBCB1DC9087794304B776206998D9C9106A8CA349FCF8B
+            14152A8ACC513AC7DAB365B789730B8DC4E58AEB0E496A6B8C3D6E44EB263F87
+            DDBC73D4574D6247731A45B919708BBCAEF3F156E5E6819114EF399EE4C2797D
+            58FBEBB7B16ED31EAC6EF8972D6F349269F6E7243AB33B777C9622D765BE6040
+            E38D4E4384373D28E93A4B571B2373802534C3999E62DC1522BD9589E3F36D5A
+            51B9E378189E1A7F17DE2E7589672ACA05B3FA65DA3C79D60AA53139E467E9E1
+            673EA671A0B9132FBE7B12C75A79C7619CD8E22C8C34004AA724A495646E9409
+            2DDA93535AF69DF54C528942B014B4C69239633D3E0F6AC325A8E5E95D56EA83
+            C6BAE9DD2367B163CF09BC7EF00C5A3A063302D2F4AE698E2869730C78C9E4C6
+            D491D01399DD42BC954BCB43B6B2562BCA8A12AACDCCB3CE442D042F2F2C53B8
+            1D4EA5A2553CA5AB2B4A505EE2473FF3E61F4DED78E1BD16EC3AD08A7F1F6EC7
+            39C6FC28A425BFCC76EA9AF94DE46EF60AEAAF5BA09BDAEA73510D1DBD11F444
+            E218882530C4E494DC4CD0830909212A2B7AA6591A289A0AAFE681C6D3566108
+            E98938EE5C35DB3A1B848621C560869B761EC3C93EE0E3334338D616252338D5
+            19415B5FE2FC4E961F81CE0D8A7321D6C338D45FC1B97DEFC917EBB5FC6343C1
+            827B96A3CCF7166A17514BDB038C6FA81CCC18CFB42EB4FA90D246FBD0FBD4EA
+            CCD83C84EF6482974DE1D454564803332DBDE24A868CB4D2C75BC243F8208D48
+            AEC4A1DFBD4D7196013921C41781C43E98463B5239CB9735C069DD28C6D994FE
+            8560C9CAE96BD14D9ED09ECF9167B04C4F981D40FF3EFECAC6E9C8D9F673974B
+            631F7431809FAC09EDD6791E351129658728C350CA4EE80629E8A48FD0EA9F27
+            27CBBC3915F6D563CC76731F5762C49F43F266AB4BD1805730700E28E585DC11
+            6209A2E0DCE74294EF85901D2B06E48D73983B87F35C5A014BA754FA15ECA78E
+            39E0D75CB04C8D0CBD0A23790E49AE82CAC2CB11E230D73B9258F90AC8F742B0
+            56C0658CC871952FA4B1497A3F6DB461D07C35B79416B0471E8E0FC5985C5BD0
+            71D45E054E9A658E604759999CDB2C0C6E53C251DB481E7446802137253AD252
+            DC9663199223DF99AFB41268FF94638C2D38D51EB5A564E13E5BCDFDA5986E1E
+            44FD82D90870F96437C8C66D6ECB49A58DF6A3A9E16A7B307009AF946E38D37B
+            7E7358B2713F505E9591CD7B826590D53ABF499927DE0BB43635A3455B828EDF
+            8C328026BAA02314472AD180962329F8A98C26A1E4AC422ECF7B4C9476580823
+            FAB87A3C8732272B637C769837A35483A5930B38D20D8CB341752714FD599CDE
+            0B94B00A94AEF99338938B3213C57806C89CCD8DDC3013CFA10F2FE7C7BE03F6
+            1C0355B78430BDFE35944FFE262E5FC15019A067ECB0B1C2885E92E7D8209A1E
+            5E680F12B889CD6EDDD6E392CD8C6B896F27647815CD3C339424F78EBE090C76
+            ED458BB10E5D5B0BFE5D726C0304F3EFAE45A9B617E535B3317765664710E4E6
+            8225869467315012D30A3B7B754C896F5214744E582911C4D3A2B813F302099B
+            63547EA8FD3406135FC7B167DA321FDC41E9E3A0EBC308CAE7BCCCC996A1E7F4
+            25A8B99C070A6358CA00F90B9C95C854D6C3EB5E96FC2E8AF8ECD63296FD2CDA
+            212306674B0A1A237DC5B843BB64A53FC050EF1A1CDB36A6F282F10D10747F12
+            4168FE8B9CB31E3D4716A1A4524105EF1592179627C5D3369D6D51BC2B90EF8E
+            A296B2D252516B55F84D8C13E5BB9AB985EF4E63D8789E67D16D38FE67F9EFA6
+            71519C01829E8F93F0CDFB277CBE33EA60EBB566E7C910CAAA81108B330F5740
+            BCE82460168EF26CADD011C5C5087E9231A2BC9CB0877741EBFFA253D1D3F79B
+            DD039BD0BCCD8ED3F1913B5B91B845C3A508695575BF50D2BE7B8C803F84DA2B
+            805A8696BF8C4A318444AC2539A7A50DD63FA904F7F6211E4EC7C9A3F0A69251
+            16904FEA9DAD8FE1B4FC97EB4BB4B27858E22F0C0D1ECC6DABF05555FC58F528
+            DF4D99892B74C3E743683210E4EE52420632FFC18161DEA8E2BC08B0D446B487
+            171B3DA9A981E3693DF542B2BDEB699C9ACE0F8FD8593C315C84010E6EF060F6
+            620D3E4FA9B7525DAFF8BCCB4D4D9999F668B58CF3B0D545F1F4A9E974BB69A4
+            5A94B8DEA80FA4FFC66B5F14A70ED1DBEF5C90E20EBE040372C1F05A5AA9D2DB
+            0AA2252A52E18C7CADD744692CCD9531B1BF8F1930B130F93FFE7701FC1750C1
+            66146120D4B20000000049454E44AE426082}
+        end>
+      Align = Right
+      Hint = 'Acerca de Reproductor de M'#250'sica...'
+      HitTest = False
+      Size.Width = 22.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      ParentShowHint = False
+      ShowHint = True
+    end
   end
 end

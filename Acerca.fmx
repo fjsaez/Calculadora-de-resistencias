@@ -1840,17 +1840,17 @@ object FAcerca: TFAcerca
     Size.Width = 233.000000000000000000
     Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
-    Text = 'Autor: Francisco J. S'#225'ez S.'
+    Text = 'Autor: Ing. Francisco J. S'#225'ez S.'
     TextSettings.Font.Size = 16.000000000000000000
     TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   object Text3: TText
-    Position.X = 64.000000000000000000
+    Position.X = 36.000000000000000000
     Position.Y = 280.000000000000000000
-    Size.Width = 209.000000000000000000
+    Size.Width = 265.000000000000000000
     Size.Height = 33.000000000000000000
     Size.PlatformDefault = False
-    Text = 'Calabozo, 21 de noviembre de 2020'
+    Text = 'Calabozo (Venezuela), 21 de noviembre de 2020'
   end
   object Button1: TButton
     Cancel = True
