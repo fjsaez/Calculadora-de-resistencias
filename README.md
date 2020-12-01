@@ -43,9 +43,9 @@ Calabozo (Venezuela), noviembre de 2020.
 
 ## Link de descarga de ejecutables
 
-32 bits: https://mega.nz/file/bsUGkKQa#Snlb7AS5jilqaB2dnJ_CkLhI9WGk_UmAz9wMSigdmHU
+32 bits: https://mega.nz/file/LtN32AZQ#qeAPHxjUmxGQchbKrPZ6pGdzJlmsaKfIkXxDbetr22s
 
-64 bits: https://mega.nz/file/OxFmVYwY#HKJ2UQtcx_Z34F3WEn5gkwNUNlHrx9452WjlbkPc4eQ
+64 bits: https://mega.nz/file/D4030SqL#GrTo_Ch39-Do_bRPtDH7h6S8T538N538LHLufY5TUgQ
 
 ## Imágenes de la aplicación
 
