@@ -129,7 +129,7 @@ begin
   RectMult.Fill.Color:=$FFE0E0E0;
   RectTolerancia.Fill.Color:=$FFE0E0E0;
   //el resumen:
-  LResistencia.Text:='0 Ω / 0 %';
+  LResistencia.Text:='Resistencia: 0 Ω';
   LTolerancia.Text:='Tolerancia: 0 % (0 Ω)';
   LMinMax.Text:='Min: 0 Ω / Máx: 0 Ω';
 end;
@@ -279,4 +279,4 @@ begin
   end;
 end;
 
-end.      //246   //270   //282
+end.
